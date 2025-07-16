@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyTitle>ECB Validation Plugin Tests</AssemblyTitle>
+    <AssemblyDescription>Unit and integration tests for ECB Validation Dataverse plugin</AssemblyDescription>
+    <AssemblyCompany>DOR Automation</AssemblyCompany>
+    <AssemblyProduct>ECB Validation System Tests</AssemblyProduct>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    <IsPackable>false</IsPackable>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <!-- Test Framework References -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.6.0" />
+    <PackageReference Include="MSTest.TestAdapter" Version="3.0.4" />
+    <PackageReference Include="MSTest.TestFramework" Version="3.0.4" />
+    <PackageReference Include="coverlet.collector" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- Plugin Dependencies -->
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="9.0.2.46" />
+    <PackageReference Include="EPPlus" Version="6.2.10" />
+    <PackageReference Include="System.Text.Json" Version="6.0.0" />
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+
+  <!-- Mock and Testing Utilities -->
+  <ItemGroup>
+    <PackageReference Include="Moq" Version="4.20.69" />
+    <PackageReference Include="FluentAssertions" Version="6.12.0" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="6.0.0" />
+  </ItemGroup>
+
+  <!-- Test Files -->
+  <ItemGroup>
+    <Compile Include="ECBValidationPlugin.Tests.cs" />
+    <Compile Include="ECBValidationPlugin.TestMocks.cs" />
+    <Compile Include="ECBValidationPlugin.IntegrationTests.cs" />
+  </ItemGroup>
+
+  <!-- Reference to the main plugin project -->
+  <ItemGroup>
+    <ProjectReference Include="..\ECBValidationPlugin.csproj" />
+  </ItemGroup>
+
+  <!-- Test Data Files -->
+  <ItemGroup>
+    <EmbeddedResource Include="TestData\**\*" />
+  </ItemGroup>
+
+  <!-- Copy test files to output directory -->
+  <ItemGroup>
+    <None Include="TestData\**\*">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
