@@ -1,0 +1,387 @@
+{
+  "definition": {
+    "$schema": "https://schema.management.azure.com/providers/Microsoft.Logic/schemas/2016-06-01/workflowdefinition.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+      "$connections": {
+        "defaultValue": {},
+        "type": "Object"
+      }
+    },
+    "triggers": {
+      "When_a_file_is_created_in_SharePoint": {
+        "recurrence": {
+          "frequency": "Minute",
+          "interval": 1
+        },
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "connectionName": "sharepoint",
+            "operationId": "OnNewFileV2",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+          },
+          "parameters": {
+            "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+            "table": "Documents/ECB_Upload",
+            "inferContentType": true
+          }
+        }
+      }
+    },
+    "actions": {
+      "Get_file_content": {
+        "runAfter": {},
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "connectionName": "sharepoint",
+            "operationId": "GetFileContent",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+          },
+          "parameters": {
+            "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+            "id": "@triggerOutputs()?['body/Id']"
+          }
+        }
+      },
+      "Initialize_validation_status": {
+        "runAfter": {
+          "Get_file_content": ["Succeeded"]
+        },
+        "type": "InitializeVariable",
+        "inputs": {
+          "variables": [
+            {
+              "name": "ValidationStatus",
+              "type": "string",
+              "value": "PROCESSING"
+            }
+          ]
+        }
+      },
+      "Initialize_error_count": {
+        "runAfter": {
+          "Initialize_validation_status": ["Succeeded"]
+        },
+        "type": "InitializeVariable",
+        "inputs": {
+          "variables": [
+            {
+              "name": "ErrorCount",
+              "type": "integer",
+              "value": 0
+            }
+          ]
+        }
+      },
+      "Try_ECB_Validation": {
+        "runAfter": {
+          "Initialize_error_count": ["Succeeded"]
+        },
+        "type": "Scope",
+        "actions": {
+          "ECB_Validation_Plugin": {
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "dataverse",
+                "operationId": "PerformUnboundAction",
+                "apiId": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+              },
+              "parameters": {
+                "entityName": "dor_ECBValidation",
+                "item": {
+                  "UserExcelFile": "@{base64(outputs('Get_file_content')?['body'])}",
+                  "ECBRulesUrl": "",
+                  "TableFilter": ""
+                }
+              }
+            }
+          },
+          "Parse_validation_result": {
+            "runAfter": {
+              "ECB_Validation_Plugin": ["Succeeded"]
+            },
+            "type": "ParseJson",
+            "inputs": {
+              "content": "@outputs('ECB_Validation_Plugin')?['body/ValidationResult']",
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "Status": {
+                    "type": "string"
+                  },
+                  "TotalErrors": {
+                    "type": "integer"
+                  },
+                  "ProcessedSheets": {
+                    "type": "array",
+                    "items": {
+                      "type": "string"
+                    }
+                  },
+                  "Report": {
+                    "type": "string"
+                  },
+                  "Timestamp": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          },
+          "Set_validation_status": {
+            "runAfter": {
+              "Parse_validation_result": ["Succeeded"]
+            },
+            "type": "SetVariable",
+            "inputs": {
+              "name": "ValidationStatus",
+              "value": "@body('Parse_validation_result')?['Status']"
+            }
+          },
+          "Set_error_count": {
+            "runAfter": {
+              "Set_validation_status": ["Succeeded"]
+            },
+            "type": "SetVariable",
+            "inputs": {
+              "name": "ErrorCount",
+              "value": "@body('Parse_validation_result')?['TotalErrors']"
+            }
+          }
+        }
+      },
+      "Catch_validation_errors": {
+        "runAfter": {
+          "Try_ECB_Validation": ["Failed", "TimedOut"]
+        },
+        "type": "Scope",
+        "actions": {
+          "Set_error_status": {
+            "type": "SetVariable",
+            "inputs": {
+              "name": "ValidationStatus",
+              "value": "ERROR"
+            }
+          },
+          "Log_error_to_SharePoint": {
+            "runAfter": {
+              "Set_error_status": ["Succeeded"]
+            },
+            "type": "OpenApiConnection",
+            "inputs": {
+              "host": {
+                "connectionName": "sharepoint",
+                "operationId": "PostItem",
+                "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+              },
+              "parameters": {
+                "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+                "table": "Error_Log",
+                "item": {
+                  "Title": "ECB Validation Error",
+                  "FileName": "@triggerOutputs()?['body/Name']",
+                  "ErrorMessage": "@{actions('Try_ECB_Validation')?['error']?['message']}",
+                  "Timestamp": "@utcNow()",
+                  "Status": "Failed"
+                }
+              }
+            }
+          }
+        }
+      },
+      "Process_validation_results": {
+        "runAfter": {
+          "Try_ECB_Validation": ["Succeeded"],
+          "Catch_validation_errors": ["Succeeded", "Skipped"]
+        },
+        "type": "Switch",
+        "expression": "@variables('ValidationStatus')",
+        "cases": {
+          "PASS": {
+            "case": "PASS",
+            "actions": {
+              "Send_success_email": {
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "office365",
+                    "operationId": "SendEmailV2",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                  },
+                  "parameters": {
+                    "emailMessage": {
+                      "To": "@triggerOutputs()?['body/CreatedBy/Email']",
+                      "Subject": "ECB Validation - PASSED ✅",
+                      "Body": "<html><body><h2>ECB Validation Successful</h2><p>Your Excel file <strong>@{triggerOutputs()?['body/Name']}</strong> has passed all ECB validation rules.</p><ul><li><strong>Status:</strong> PASSED</li><li><strong>Processed Sheets:</strong> @{join(body('Parse_validation_result')?['ProcessedSheets'], ', ')}</li><li><strong>Validation Time:</strong> @{utcNow()}</li></ul><p>The file is ready for further processing.</p></body></html>",
+                      "Importance": "Normal"
+                    }
+                  }
+                }
+              },
+              "Move_to_approved_folder": {
+                "runAfter": {
+                  "Send_success_email": ["Succeeded"]
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "sharepoint",
+                    "operationId": "CopyFile",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                  },
+                  "parameters": {
+                    "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+                    "source": "@triggerOutputs()?['body/Path']",
+                    "destination": "Documents/ECB_Approved/@{triggerOutputs()?['body/Name']}"
+                  }
+                }
+              }
+            }
+          },
+          "FAIL": {
+            "case": "FAIL",
+            "actions": {
+              "Create_detailed_error_report": {
+                "type": "Compose",
+                "inputs": {
+                  "FileName": "@triggerOutputs()?['body/Name']",
+                  "ValidationStatus": "@variables('ValidationStatus')",
+                  "TotalErrors": "@variables('ErrorCount')",
+                  "DetailedReport": "@body('Parse_validation_result')?['Report']",
+                  "ProcessedSheets": "@body('Parse_validation_result')?['ProcessedSheets']",
+                  "ValidationTime": "@utcNow()"
+                }
+              },
+              "Send_error_email": {
+                "runAfter": {
+                  "Create_detailed_error_report": ["Succeeded"]
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "office365",
+                    "operationId": "SendEmailV2",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                  },
+                  "parameters": {
+                    "emailMessage": {
+                      "To": "@triggerOutputs()?['body/CreatedBy/Email']",
+                      "Subject": "ECB Validation - FAILED ❌ (@{variables('ErrorCount')} errors)",
+                      "Body": "<html><body><h2>ECB Validation Failed</h2><p>Your Excel file <strong>@{triggerOutputs()?['body/Name']}</strong> has <strong>@{variables('ErrorCount')} validation errors</strong> that need to be corrected.</p><h3>Summary:</h3><ul><li><strong>Status:</strong> FAILED</li><li><strong>Total Errors:</strong> @{variables('ErrorCount')}</li><li><strong>Processed Sheets:</strong> @{join(body('Parse_validation_result')?['ProcessedSheets'], ', ')}</li><li><strong>Validation Time:</strong> @{utcNow()}</li></ul><h3>Detailed Error Report:</h3><pre>@{body('Parse_validation_result')?['Report']}</pre><p>Please correct the errors and resubmit the file.</p></body></html>",
+                      "Importance": "High"
+                    }
+                  }
+                }
+              },
+              "Save_error_report_to_SharePoint": {
+                "runAfter": {
+                  "Send_error_email": ["Succeeded"]
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "sharepoint",
+                    "operationId": "CreateFile",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                  },
+                  "parameters": {
+                    "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+                    "folderPath": "Documents/ECB_ErrorReports",
+                    "name": "@{replace(triggerOutputs()?['body/Name'], '.xlsx', '')}_ErrorReport_@{formatDateTime(utcNow(), 'yyyyMMdd_HHmmss')}.txt",
+                    "body": "@body('Parse_validation_result')?['Report']"
+                  }
+                }
+              },
+              "Move_to_failed_folder": {
+                "runAfter": {
+                  "Save_error_report_to_SharePoint": ["Succeeded"]
+                },
+                "type": "OpenApiConnection",
+                "inputs": {
+                  "host": {
+                    "connectionName": "sharepoint",
+                    "operationId": "CopyFile",
+                    "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+                  },
+                  "parameters": {
+                    "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+                    "source": "@triggerOutputs()?['body/Path']",
+                    "destination": "Documents/ECB_Failed/@{triggerOutputs()?['body/Name']}"
+                  }
+                }
+              }
+            }
+          }
+        },
+        "default": {
+          "actions": {
+            "Send_error_notification": {
+              "type": "OpenApiConnection",
+              "inputs": {
+                "host": {
+                  "connectionName": "office365",
+                  "operationId": "SendEmailV2",
+                  "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+                },
+                "parameters": {
+                  "emailMessage": {
+                    "To": "admin@yourdomain.com",
+                    "Subject": "ECB Validation - System Error",
+                    "Body": "<html><body><h2>ECB Validation System Error</h2><p>An error occurred while processing file <strong>@{triggerOutputs()?['body/Name']}</strong>.</p><p><strong>Error Status:</strong> @{variables('ValidationStatus')}</p><p>Please check the system logs and investigate.</p></body></html>",
+                    "Importance": "High"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "Log_processing_result": {
+        "runAfter": {
+          "Process_validation_results": ["Succeeded", "Failed"]
+        },
+        "type": "OpenApiConnection",
+        "inputs": {
+          "host": {
+            "connectionName": "sharepoint",
+            "operationId": "PostItem",
+            "apiId": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+          },
+          "parameters": {
+            "dataset": "https://yourtenant.sharepoint.com/sites/YourSite",
+            "table": "Validation_Log",
+            "item": {
+              "Title": "ECB Validation Log",
+              "FileName": "@triggerOutputs()?['body/Name']",
+              "ValidationStatus": "@variables('ValidationStatus')",
+              "ErrorCount": "@variables('ErrorCount')",
+              "ProcessedSheets": "@{if(equals(variables('ValidationStatus'), 'ERROR'), 'N/A', join(body('Parse_validation_result')?['ProcessedSheets'], ', '))}",
+              "ProcessingTime": "@utcNow()",
+              "UploadedBy": "@triggerOutputs()?['body/CreatedBy/DisplayName']"
+            }
+          }
+        }
+      }
+    }
+  },
+  "connectionReferences": {
+    "sharepoint": {
+      "connectionName": "shared-sharepointonline",
+      "source": "NotSpecified",
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline"
+    },
+    "dataverse": {
+      "connectionName": "shared-commondataserviceforapps",
+      "source": "NotSpecified", 
+      "id": "/providers/Microsoft.PowerApps/apis/shared_commondataserviceforapps"
+    },
+    "office365": {
+      "connectionName": "shared-office365",
+      "source": "NotSpecified",
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365"
+    }
+  }
+}

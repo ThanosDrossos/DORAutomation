@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net472</TargetFramework>
+    <AssemblyTitle>ECB Validation Plugin</AssemblyTitle>
+    <AssemblyDescription>Dataverse plugin for ECB Excel validation using dynamic rule extraction</AssemblyDescription>
+    <AssemblyCompany>DOR Automation</AssemblyCompany>
+    <AssemblyProduct>ECB Validation System</AssemblyProduct>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <AssemblyFileVersion>1.0.0.0</AssemblyFileVersion>
+    <OutputType>Library</OutputType>
+    <GenerateAssemblyInfo>true</GenerateAssemblyInfo>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>ECBValidationPlugin.snk</AssemblyOriginatorKeyFile>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>full</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="9.0.2.46">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    
+    <PackageReference Include="EPPlus" Version="6.2.10">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    
+    <PackageReference Include="System.Text.Json" Version="6.0.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    
+    <PackageReference Include="System.Net.Http" Version="4.3.4">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>compile; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <!-- Merge dependencies into single assembly for Dataverse deployment -->
+  <ItemGroup>
+    <PackageReference Include="ILMerge.MSBuild.Task" Version="1.2.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <PropertyGroup>
+    <ILMergeConsolePath>$(MSBuildThisFileDirectory)packages\ilmerge\tools\net452\ILMerge.exe</ILMergeConsolePath>
+  </PropertyGroup>
+
+  <Target Name="ILMerge" AfterTargets="Build" Condition="'$(Configuration)'=='Release'">
+    <ItemGroup>
+      <MergeAssemblies Include="$(OutputPath)$(AssemblyName).dll" />
+      <MergeAssemblies Include="$(OutputPath)EPPlus.dll" />
+      <MergeAssemblies Include="$(OutputPath)System.Text.Json.dll" />
+    </ItemGroup>
+    
+    <Message Text="Merging assemblies for Dataverse deployment..." Importance="high" />
+    
+    <Exec Command="$(ILMergeConsolePath) /target:library /out:$(OutputPath)$(AssemblyName).Merged.dll @(MergeAssemblies, ' ')" 
+          ContinueOnError="false" />
+    
+    <Message Text="Assembly merge completed: $(AssemblyName).Merged.dll" Importance="high" />
+  </Target>
+
+  <ItemGroup>
+    <Compile Include="ECBValidationPlugin.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="README.md" />
+    <None Include="ECB_Plugin_Documentation.md" />
+    <None Include="Deployment_Scripts.md" />
+    <None Include="PowerAutomate_ECB_Validation_Flow.json" />
+  </ItemGroup>
+
+  <!-- Assembly information -->
+  <ItemGroup>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
+      <_Parameter1>ECBValidationVersion</_Parameter1>
+      <_Parameter2>1.0.0</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
+      <_Parameter1>ECBRulesUrl</_Parameter1>
+      <_Parameter2>https://eba.europa.eu/sites/default/files/2025-04/10100a51-275f-4c98-96a1-f81342a8f57d/Overview%20of%20the%20RoI%20reporting%20technical%20checks%20and%20validation%20rules%20%28updated%2028%20April%202025%29%20%284%29.xlsx</_Parameter2>
+    </AssemblyAttribute>
+    <AssemblyAttribute Include="System.Reflection.AssemblyMetadata">
+      <_Parameter1>SupportedRuleTypes</_Parameter1>
+      <_Parameter2>mandatory_field,value_constraint,regex_validation,conditional_rule,equality_check,complex_validation</_Parameter2>
+    </AssemblyAttribute>
+  </ItemGroup>
+
+</Project>
