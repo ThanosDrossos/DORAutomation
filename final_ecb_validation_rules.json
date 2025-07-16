@@ -1,0 +1,3896 @@
+[
+  {
+    "id": "ECB_RULE_001",
+    "original_expression": "with {tB_05.01, default:null, interval:false}: not ( isnull ({(c0020, c0050, c0060, c0070, c0080, c0110)}) )",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0080",
+      "c0110",
+      "c0070"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_002",
+    "original_expression": "with {tB_01.03, default:null, interval:false}: not ( isnull ({c*}) )",
+    "table_references": [
+      "tB_01.03"
+    ],
+    "column_references": [
+      "c*"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_003",
+    "original_expression": "with {tB_01.02, default:null, interval:false}: not ( isnull ({c0020-0090}) )",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0020",
+      "c0020-0090"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_004",
+    "original_expression": "with {tB_01.01, default:null, interval:false}: not ( isnull ({c*}) )",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c*"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_005",
+    "original_expression": "with {tB_02.02, default:null, interval:false}: not ( isnull ({c0040-0080}) )",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0040",
+      "c0040-0080"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_006",
+    "original_expression": "with {tB_07.01, default:null, interval:false}: not ( isnull ({(c0050, c0070, c0080, c0090, c0100, c0110)}) )",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0100",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_007",
+    "original_expression": "with {tB_06.01, default:null, interval:false}: not ( isnull ({(c0020, c0030, c0050, c0070, c0080, c0090, c0100)}) )",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_008",
+    "original_expression": "with {tB_04.01, default:null, interval:false}: not ( isnull ({c0030}) )",
+    "table_references": [
+      "tB_04.01"
+    ],
+    "column_references": [
+      "c0030"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_009",
+    "original_expression": "with {tB_02.01, default:null, interval:false}: not ( isnull ({(c0020, c0040, c0050)}) )",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0050",
+      "c0040"
+    ],
+    "rule_type": "NOT_NULL",
+    "functions": [
+      "not",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_010",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( {c0020} = [eba_CO:x3] ) then ( not ( isnull ({c0030}) ) ) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "isnull",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_011",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: {c0110} >= 0",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0110"
+    ],
+    "rule_type": "COMPARISON",
+    "functions": [],
+    "operators": [
+      "=",
+      ">=",
+      ">",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_012",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: {c0050} >= 0",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0050"
+    ],
+    "rule_type": "COMPARISON",
+    "functions": [],
+    "operators": [
+      "=",
+      ">=",
+      ">",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_013",
+    "original_expression": "with {tB_01.02, default: 0, interval: false}: if (not (isnull ({c0110}))) then (not (isnull ({c0100}))) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0100",
+      "c0110"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_014",
+    "original_expression": "with{tB_01.02, default:0, interval:false}: if({c0040} != [eba_CT:x318] and {c0040} != [eba_CT:x317]) then (not (isnull ({c0110}))) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0110",
+      "c0040"
+    ],
+    "rule_type": "VALIDATION",
+    "functions": [
+      "not",
+      "if",
+      "isnull",
+      "then"
+    ],
+    "operators": [
+      "not",
+      "!=",
+      "and",
+      "=",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_015",
+    "original_expression": "with {tB_02.01, default: 0, interval: false}:if({c0020} = [eba_CO:x3]) then (not (isnull ({c0030}))) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0030"
+    ],
+    "rule_type": "VALIDATION",
+    "functions": [
+      "not",
+      "if",
+      "isnull",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_016",
+    "original_expression": "with {tB_02.02, default: 0, interval: false}: {c0080} > {c0070}",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0080",
+      "c0070"
+    ],
+    "rule_type": "COMPARISON",
+    "functions": [],
+    "operators": [
+      "in",
+      ">"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_017",
+    "original_expression": "with{tB_05.01, default:0, interval: false}: if ({c0070} = [eba_CT:x212]) then ({c0020} in {[eba_qCO:qx2000], [eba_qCO:qx2002]}) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "if",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_018",
+    "original_expression": "with{tB_05.01, default:0, interval: false}: if ({c0070} = [eba_CT:x212]) then ({c0040} in {[eba_qCO:qx2000], [eba_qCO:qx2002]}) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0070",
+      "c0040"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "if",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_019",
+    "original_expression": "with{tB_05.01, default:0, interval: false}: if({c0020} = [eba_qCO:qx2000]) then ( (match({c0030}, \"^[A-Z0-9]{18}[0-9]{2}$\"))) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0030"
+    ],
+    "rule_type": "VALIDATION",
+    "functions": [
+      "match",
+      "if",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_020",
+    "original_expression": "with {tB_05.01, default: 0, interval: false}: if({c0030} != \"null\") then ({c0040} != \"null\") endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "VALIDATION",
+    "functions": [
+      "if",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "!=",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_021",
+    "original_expression": "with {tB_05.01, default: 0, interval: false}: if({c0100} != \"null\") then ({c0090} != \"null\") endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0100",
+      "c0090"
+    ],
+    "rule_type": "VALIDATION",
+    "functions": [
+      "if",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "!=",
+      "in"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_022",
+    "original_expression": "with {tB_07.01, default:0, interval: false}: if {c0050} = [eba_ZZ:x959] or {c0050} = [eba_ZZ:x960] then (not (isnull ({c0060}))) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "isnull",
+      "then"
+    ],
+    "operators": [
+      "=",
+      "not",
+      "in",
+      "or"
+    ],
+    "parameters": {
+      "default": "0",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_023",
+    "original_expression": "match({tB_01.02, c0060}, \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0060"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_024",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_025",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_026",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_027",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_028",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_029",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0110}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_030",
+    "original_expression": "with {tB_01.03, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_01.03"
+    ],
+    "column_references": [
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_031",
+    "original_expression": "with {tB_01.03, default: null, interval: false}: if ( not ( isnull ({c0040}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_01.03"
+    ],
+    "column_references": [
+      "c0030",
+      "c0040"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_032",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_033",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_034",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0020}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_035",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_036",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_037",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_038",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_039",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_040",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0030}) )) or not (( isnull ({c0040}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0050",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_041",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0030}) )) or not (( isnull ({c0050}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0040",
+      "c0020",
+      "c0050",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_042",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0050}) ) ) or not (( isnull ({c0030}) )) or not (( isnull ({c0040}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0040",
+      "c0020",
+      "c0050",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_043",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0070}) ) ) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) or not (( isnull ({c0140}) )) or not (( isnull ({c0170}) )) or not (( isnull ({c0180}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_044",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040}) ) ) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) or not (( isnull ({c0140}) )) or not (( isnull ({c0170}) )) or not (( isnull ({c0180}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_045",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0070}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) or not (( isnull ({c0140}) )) or not (( isnull ({c0170}) )) or not (( isnull ({c0180}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_046",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_047",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_048",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0020}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_049",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_050",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0020}) )) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_051",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_052",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_053",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_054",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_055",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_056",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_057",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0020}) )) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_058",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_059",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_060",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_061",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_062",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0110}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_063",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "or",
+      "not",
+      "in"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_064",
+    "original_expression": "match({tB_01.01, c0020}[get ERI], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0020"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_065",
+    "original_expression": "match({tB_01.02, c0020}[get ESI], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0020"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_066",
+    "original_expression": "match({tB_01.03, c0030}[get LHH], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_01.03"
+    ],
+    "column_references": [
+      "c0030"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_067",
+    "original_expression": "match({tB_02.02, c0040}[get LES], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0040"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_068",
+    "original_expression": "match({tB_03.01, c0030}[get LEA], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_03.01"
+    ],
+    "column_references": [
+      "c0030"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_069",
+    "original_expression": "match({tB_03.03, c0031}[get LEB], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_03.03"
+    ],
+    "column_references": [
+      "c0031"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_070",
+    "original_expression": "match({tB_04.01, c0030}[get LES], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_04.01"
+    ],
+    "column_references": [
+      "c0030"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_071",
+    "original_expression": "match({tB_06.01, c0020}[get LES], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0020"
+    ],
+    "rule_type": "REGEX_MATCH",
+    "functions": [
+      "match"
+    ],
+    "operators": [],
+    "parameters": {}
+  },
+  {
+    "id": "ECB_RULE_072",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_073",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0040, c0050, c0060, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_074",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_075",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0060, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_076",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_077",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_078",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_079",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_080",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0110, c0120}) ) ) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_081",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0100, c0120}) ) ) then ( ( not ( isnull ({c0110}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_082",
+    "original_expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0120}) ) )) endif",
+    "table_references": [
+      "tB_05.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0120",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_083",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_084",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0040, c0050, c0060, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_085",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_086",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0060, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_087",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_088",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_089",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_090",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0100, c0110}) ) ) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_091",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0110}) ) ) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_092",
+    "original_expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050, c0060, c0070, c0080, c0090, c0100}) ) ) then ( ( not ( isnull ({c0110}) ) )) endif",
+    "table_references": [
+      "tB_01.02"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0040",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_093",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0040, c0050}) ) ) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0050",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_094",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0040, c0050}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0050",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_095",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0020",
+      "c0050",
+      "c0030",
+      "c0040"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_096",
+    "original_expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040}) ) ) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_02.01"
+    ],
+    "column_references": [
+      "c0040",
+      "c0020",
+      "c0050",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_097",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0070, c0080, c0090, c0100, c0110, c0120, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_098",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0080, c0090, c0100, c0110, c0120, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_099",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0090, c0100, c0110, c0120, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_100",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0100, c0110, c0120, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_101",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0090, c0110, c0120, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_102",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0090, c0100, c0120, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0110}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_103",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0090, c0100, c0110, c0140, c0170, c0180}) ) ) then ( ( not ( isnull ({c0120}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_104",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0090, c0100, c0110, c0120, c0170, c0180}) ) ) then ( ( not ( isnull ({c0140}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_105",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0090, c0100, c0110, c0120, c0140, c0180}) ) ) then ( ( not ( isnull ({c0170}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_106",
+    "original_expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040, c0070, c0080, c0090, c0100, c0110, c0120, c0140, c0170}) ) ) then ( ( not ( isnull ({c0180}) ) )) endif",
+    "table_references": [
+      "tB_02.02"
+    ],
+    "column_references": [
+      "c0140",
+      "c0100",
+      "c0120",
+      "c0040",
+      "c0170",
+      "c0180",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_107",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0040, c0050, c0060}) ) ) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_108",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0040, c0050, c0060}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_109",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_110",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0060}) ) ) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_111",
+    "original_expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0040, c0050}) ) ) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_01.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0020",
+      "c0040",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_112",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0070, c0080, c0090, c0100}) ) ) then ( ( not ( isnull ({c0020}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_113",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0050, c0060, c0070, c0080, c0090, c0100}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_114",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0060, c0070, c0080, c0090, c0100}) ) ) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_115",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0070, c0080, c0090, c0100}) ) ) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_116",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060, c0080, c0090, c0100}) ) ) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_117",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060, c0070, c0090, c0100}) ) ) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_118",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060, c0070, c0080, c0100}) ) ) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_119",
+    "original_expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020, c0030, c0050, c0060, c0070, c0080, c0090}) ) ) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_06.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0020",
+      "c0080",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_120",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0050, c0060, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_121",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0060, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0050}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_122",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0070, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0060}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_123",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0080, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0070}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_124",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0070, c0090, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0080}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_125",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0070, c0080, c0100, c0110, c0120}) ) ) then ( ( not ( isnull ({c0090}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_126",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0070, c0080, c0090, c0110, c0120}) ) ) then ( ( not ( isnull ({c0100}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_127",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0070, c0080, c0090, c0100, c0120}) ) ) then ( ( not ( isnull ({c0110}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  },
+  {
+    "id": "ECB_RULE_128",
+    "original_expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030, c0050, c0060, c0070, c0080, c0090, c0100, c0110}) ) ) then ( ( not ( isnull ({c0120}) ) )) endif",
+    "table_references": [
+      "tB_07.01"
+    ],
+    "column_references": [
+      "c0050",
+      "c0060",
+      "c0100",
+      "c0120",
+      "c0080",
+      "c0110",
+      "c0090",
+      "c0070",
+      "c0030"
+    ],
+    "rule_type": "CONDITIONAL",
+    "functions": [
+      "not",
+      "if",
+      "then",
+      "isnull"
+    ],
+    "operators": [
+      "in",
+      "not"
+    ],
+    "parameters": {
+      "default": "null",
+      "interval": "false"
+    }
+  }
+]

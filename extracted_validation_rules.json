@@ -1,0 +1,665 @@
+[
+  {
+    "rule_id": 0,
+    "original_expression": "Please note: The validation checks are are valid  with respect to the data point model provided in the EBA technical reporting package v4.0 (see: https://www.eba.europa.eu/risk-and-data-analysis/reporting-frameworks/reporting-framework-40 ) and are valid for the reporting of registers in 2025. For any further use including to see any deactivation of the validation rules, please consult and verify EBA reporting frameworks valid at the time of reporting.",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [
+      "or",
+      "not",
+      "and"
+    ],
+    "functions": [
+      "0"
+    ]
+  },
+  {
+    "rule_id": 1,
+    "original_expression": "Code",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 2,
+    "original_expression": "e23674_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 3,
+    "original_expression": "e23675_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 4,
+    "original_expression": "e23676_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 5,
+    "original_expression": "e23677_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 6,
+    "original_expression": "e23680_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 7,
+    "original_expression": "e23681_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 8,
+    "original_expression": "e23682_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 9,
+    "original_expression": "e23683_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 10,
+    "original_expression": "e23792_e",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 11,
+    "original_expression": "v22912_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 12,
+    "original_expression": "v22913_s",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 13,
+    "original_expression": "v23716_s",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 14,
+    "original_expression": "v8803_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 15,
+    "original_expression": "v8804_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 16,
+    "original_expression": "v8805_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 17,
+    "original_expression": "v8816_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 18,
+    "original_expression": "v8817_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 19,
+    "original_expression": "v8818_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 20,
+    "original_expression": "v8821_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 21,
+    "original_expression": "v8823_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 22,
+    "original_expression": "v8824_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 23,
+    "original_expression": "v8825_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 24,
+    "original_expression": "v8826_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 25,
+    "original_expression": "v8850_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 26,
+    "original_expression": "v8851_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 27,
+    "original_expression": "v8852_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 28,
+    "original_expression": "v8853_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 29,
+    "original_expression": "v8854_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 30,
+    "original_expression": "v8855_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 31,
+    "original_expression": "v8856_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 32,
+    "original_expression": "v8857_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 33,
+    "original_expression": "v8858_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 34,
+    "original_expression": "v8859_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 35,
+    "original_expression": "v8860_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 36,
+    "original_expression": "v8861_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 37,
+    "original_expression": "v8862_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 38,
+    "original_expression": "v8863_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 39,
+    "original_expression": "v8864_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 40,
+    "original_expression": "v8865_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 41,
+    "original_expression": "v8866_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 42,
+    "original_expression": "v8867_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 43,
+    "original_expression": "v8868_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 44,
+    "original_expression": "v8869_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 45,
+    "original_expression": "v8870_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 46,
+    "original_expression": "v8871_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 47,
+    "original_expression": "v8872_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 48,
+    "original_expression": "v8873_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 49,
+    "original_expression": "v8874_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 50,
+    "original_expression": "v8875_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 51,
+    "original_expression": "v8876_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 52,
+    "original_expression": "v8877_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 53,
+    "original_expression": "v8878_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 54,
+    "original_expression": "v8879_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 55,
+    "original_expression": "v8880_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 56,
+    "original_expression": "v8881_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 57,
+    "original_expression": "v8882_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 58,
+    "original_expression": "v8883_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 59,
+    "original_expression": "v8884_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 60,
+    "original_expression": "v8885_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 61,
+    "original_expression": "v8886_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 62,
+    "original_expression": "v8887_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 63,
+    "original_expression": "v88889_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 64,
+    "original_expression": "v8888_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 65,
+    "original_expression": "v8890_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 66,
+    "original_expression": "v8891_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 67,
+    "original_expression": "v8892_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 68,
+    "original_expression": "v8893_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 69,
+    "original_expression": "v8894_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 70,
+    "original_expression": "v8895_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 71,
+    "original_expression": "v8896_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  },
+  {
+    "rule_id": 72,
+    "original_expression": "v8897_m",
+    "table_references": [],
+    "column_references": [],
+    "conditions": [],
+    "operators": [],
+    "functions": []
+  }
+]

@@ -1,0 +1,1164 @@
+{
+  "metadata": {
+    "total_rules": 71,
+    "extraction_method": "pattern_based",
+    "source_file": "ecb_validation_rules.xlsx",
+    "rule_types": {
+      "mandatory_field": 54,
+      "value_constraint": 5,
+      "conditional_rule": 2,
+      "regex_validation": 10
+    }
+  },
+  "rules": [
+    {
+      "id": "ECB_RULE_001",
+      "expression": "with {tB_05.01,  default:null, interval:false}: not ( isnull ({(c0020, c0050, c0060, c0070, c0080, c0110)}) )",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0020",
+        "c0080",
+        "c0110",
+        "c0070"
+      ],
+      "type": "mandatory_field",
+      "source_row": 1
+    },
+    {
+      "id": "ECB_RULE_002",
+      "expression": "with {tB_01.03, default:null, interval:false}: not ( isnull ({c*}) )",
+      "table_references": [
+        "tB_01.03"
+      ],
+      "column_references": [
+        "c*"
+      ],
+      "type": "mandatory_field",
+      "source_row": 2
+    },
+    {
+      "id": "ECB_RULE_003",
+      "expression": "with {tB_01.02,  default:null, interval:false}: not ( isnull ({c0020-0090}) )",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0020-0090"
+      ],
+      "type": "mandatory_field",
+      "source_row": 3
+    },
+    {
+      "id": "ECB_RULE_004",
+      "expression": "with {tB_01.01, default:null, interval:false}: not ( isnull ({c*}) )",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [
+        "c*"
+      ],
+      "type": "mandatory_field",
+      "source_row": 4
+    },
+    {
+      "id": "ECB_RULE_005",
+      "expression": "with {tB_02.02,  default:null, interval:false}: not ( isnull ({c0040-0080}) )",
+      "table_references": [
+        "tB_02.02"
+      ],
+      "column_references": [
+        "c0040-0080"
+      ],
+      "type": "mandatory_field",
+      "source_row": 5
+    },
+    {
+      "id": "ECB_RULE_006",
+      "expression": "with {tB_07.01,  default:null, interval:false}: not ( isnull ({(c0050, c0070, c0080, c0090, c0100, c0110)}) )",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0100",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070"
+      ],
+      "type": "mandatory_field",
+      "source_row": 6
+    },
+    {
+      "id": "ECB_RULE_007",
+      "expression": "with {tB_06.01,  default:null, interval:false}: not ( isnull ({(c0020, c0030, c0050, c0070, c0080, c0090, c0100)}) )",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 7
+    },
+    {
+      "id": "ECB_RULE_008",
+      "expression": "with {tB_04.01, default:null, interval:false}: not ( isnull ({c0030}) )",
+      "table_references": [
+        "tB_04.01"
+      ],
+      "column_references": [
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 8
+    },
+    {
+      "id": "ECB_RULE_009",
+      "expression": "with {tB_02.01,  default:null, interval:false}: not ( isnull ({(c0020, c0040, c0050)}) )",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0020",
+        "c0050",
+        "c0040"
+      ],
+      "type": "mandatory_field",
+      "source_row": 9
+    },
+    {
+      "id": "ECB_RULE_010",
+      "expression": "with {tB_02.01, default: null, interval: false}: if ( {c0020} = [eba_CO:x3] ) then ( not ( isnull ({c0030}) ) ) endif",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0020",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 10
+    },
+    {
+      "id": "ECB_RULE_011",
+      "expression": "with {tB_01.02, default: null, interval: false}: {c0110} >= 0",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0110"
+      ],
+      "type": "value_constraint",
+      "source_row": 11
+    },
+    {
+      "id": "ECB_RULE_012",
+      "expression": "with {tB_02.01, default: null, interval: false}: {c0050} >= 0",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0050"
+      ],
+      "type": "value_constraint",
+      "source_row": 12
+    },
+    {
+      "id": "ECB_RULE_013",
+      "expression": "with {tB_01.02, default: 0, interval: false}: if (not (isnull ({c0110}))) then (not (isnull ({c0100}))) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0100",
+        "c0110"
+      ],
+      "type": "mandatory_field",
+      "source_row": 13
+    },
+    {
+      "id": "ECB_RULE_014",
+      "expression": "with{tB_01.02, default:0, interval:false}: if({c0040} != [eba_CT:x318] and {c0040} != [eba_CT:x317]) then (not (isnull ({c0110}))) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0110",
+        "c0040"
+      ],
+      "type": "mandatory_field",
+      "source_row": 14
+    },
+    {
+      "id": "ECB_RULE_015",
+      "expression": "with {tB_02.01, default: 0, interval: false}:if({c0020} = [eba_CO:x3]) then (not (isnull ({c0030}))) endif",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0020",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 15
+    },
+    {
+      "id": "ECB_RULE_016",
+      "expression": "with {tB_02.02, default: 0, interval: false}: {c0080} > {c0070}",
+      "table_references": [
+        "tB_02.02"
+      ],
+      "column_references": [
+        "c0080",
+        "c0070"
+      ],
+      "type": "value_constraint",
+      "source_row": 16
+    },
+    {
+      "id": "ECB_RULE_017",
+      "expression": "with{tB_05.01, default:0, interval: false}: if ({c0070} = [eba_CT:x212]) then ({c0020} in {[eba_qCO:qx2000], [eba_qCO:qx2002]}) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0020",
+        "c0070"
+      ],
+      "type": "conditional_rule",
+      "source_row": 17
+    },
+    {
+      "id": "ECB_RULE_018",
+      "expression": "with{tB_05.01, default:0, interval: false}: if ({c0070} = [eba_CT:x212]) then ({c0040} in {[eba_qCO:qx2000], [eba_qCO:qx2002]}) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0070",
+        "c0040"
+      ],
+      "type": "conditional_rule",
+      "source_row": 18
+    },
+    {
+      "id": "ECB_RULE_019",
+      "expression": "with{tB_05.01, default:0, interval: false}: if({c0020} = [eba_qCO:qx2000]) then ( (match({c0030}, \"^[A-Z0-9]{18}[0-9]{2}$\"))) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0020",
+        "c0030"
+      ],
+      "type": "regex_validation",
+      "source_row": 19
+    },
+    {
+      "id": "ECB_RULE_020",
+      "expression": "with {tB_05.01, default: 0, interval: false}: if({c0030} != \"null\") then ({c0040} != \"null\") endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0040",
+        "c0030"
+      ],
+      "type": "value_constraint",
+      "source_row": 20
+    },
+    {
+      "id": "ECB_RULE_021",
+      "expression": "with {tB_05.01, default: 0, interval: false}: if({c0100} != \"null\") then ({c0090} != \"null\") endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0100",
+        "c0090"
+      ],
+      "type": "value_constraint",
+      "source_row": 21
+    },
+    {
+      "id": "ECB_RULE_022",
+      "expression": "with {tB_07.01, default:0, interval: false}: if {c0050} = [eba_ZZ:x959] or {c0050} = [eba_ZZ:x960] then (not (isnull ({c0060}))) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060"
+      ],
+      "type": "mandatory_field",
+      "source_row": 22
+    },
+    {
+      "id": "ECB_RULE_023",
+      "expression": "match({tB_01.02, c0060}, \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 23
+    },
+    {
+      "id": "ECB_RULE_024",
+      "expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0120",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 24
+    },
+    {
+      "id": "ECB_RULE_025",
+      "expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0120",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 25
+    },
+    {
+      "id": "ECB_RULE_026",
+      "expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0060}) ) )) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0120",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 26
+    },
+    {
+      "id": "ECB_RULE_027",
+      "expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0120",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 27
+    },
+    {
+      "id": "ECB_RULE_028",
+      "expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0120",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 28
+    },
+    {
+      "id": "ECB_RULE_029",
+      "expression": "with {tB_05.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0110}) ) )) endif",
+      "table_references": [
+        "tB_05.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0120",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 29
+    },
+    {
+      "id": "ECB_RULE_030",
+      "expression": "with {tB_01.03, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) then ( ( not ( isnull ({c0040}) ) )) endif",
+      "table_references": [
+        "tB_01.03"
+      ],
+      "column_references": [
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 30
+    },
+    {
+      "id": "ECB_RULE_031",
+      "expression": "with {tB_01.03, default: null, interval: false}: if ( not ( isnull ({c0040}) ) ) then ( ( not ( isnull ({c0030}) ) )) endif",
+      "table_references": [
+        "tB_01.03"
+      ],
+      "column_references": [
+        "c0030",
+        "c0040"
+      ],
+      "type": "mandatory_field",
+      "source_row": 31
+    },
+    {
+      "id": "ECB_RULE_032",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 32
+    },
+    {
+      "id": "ECB_RULE_033",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0030}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 33
+    },
+    {
+      "id": "ECB_RULE_034",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0020}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 34
+    },
+    {
+      "id": "ECB_RULE_035",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 35
+    },
+    {
+      "id": "ECB_RULE_036",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0060}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 36
+    },
+    {
+      "id": "ECB_RULE_037",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 37
+    },
+    {
+      "id": "ECB_RULE_038",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 38
+    },
+    {
+      "id": "ECB_RULE_039",
+      "expression": "with {tB_01.02, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) then ( ( not ( isnull ({c0090}) ) )) endif",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0040",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 39
+    },
+    {
+      "id": "ECB_RULE_040",
+      "expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0030}) )) or not (( isnull ({c0040}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0020",
+        "c0050",
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 40
+    },
+    {
+      "id": "ECB_RULE_041",
+      "expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0030}) )) or not (( isnull ({c0050}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0040",
+        "c0020",
+        "c0050",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 41
+    },
+    {
+      "id": "ECB_RULE_042",
+      "expression": "with {tB_02.01, default: null, interval: false}: if ( not ( isnull ({c0050}) ) ) or not (( isnull ({c0030}) )) or not (( isnull ({c0040}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+      "table_references": [
+        "tB_02.01"
+      ],
+      "column_references": [
+        "c0040",
+        "c0020",
+        "c0050",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 42
+    },
+    {
+      "id": "ECB_RULE_043",
+      "expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0070}) ) ) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) or not (( isnull ({c0140}) )) or not (( isnull ({c0170}) )) or not (( isnull ({c0180}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+      "table_references": [
+        "tB_02.02"
+      ],
+      "column_references": [
+        "c0140",
+        "c0100",
+        "c0120",
+        "c0040",
+        "c0170",
+        "c0180",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070"
+      ],
+      "type": "mandatory_field",
+      "source_row": 43
+    },
+    {
+      "id": "ECB_RULE_044",
+      "expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0040}) ) ) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) or not (( isnull ({c0140}) )) or not (( isnull ({c0170}) )) or not (( isnull ({c0180}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+      "table_references": [
+        "tB_02.02"
+      ],
+      "column_references": [
+        "c0140",
+        "c0100",
+        "c0120",
+        "c0040",
+        "c0170",
+        "c0180",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070"
+      ],
+      "type": "mandatory_field",
+      "source_row": 44
+    },
+    {
+      "id": "ECB_RULE_045",
+      "expression": "with {tB_02.02, default: null, interval: false}: if ( not ( isnull ({c0070}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) or not (( isnull ({c0140}) )) or not (( isnull ({c0170}) )) or not (( isnull ({c0180}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+      "table_references": [
+        "tB_02.02"
+      ],
+      "column_references": [
+        "c0140",
+        "c0100",
+        "c0120",
+        "c0040",
+        "c0170",
+        "c0180",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070"
+      ],
+      "type": "mandatory_field",
+      "source_row": 45
+    },
+    {
+      "id": "ECB_RULE_046",
+      "expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0020",
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 46
+    },
+    {
+      "id": "ECB_RULE_047",
+      "expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0030}) ) )) endif",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0020",
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 47
+    },
+    {
+      "id": "ECB_RULE_048",
+      "expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0020}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0040}) ) )) endif",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0020",
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 48
+    },
+    {
+      "id": "ECB_RULE_049",
+      "expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0020",
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 49
+    },
+    {
+      "id": "ECB_RULE_050",
+      "expression": "with {tB_01.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0040}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0020}) )) then ( ( not ( isnull ({c0060}) ) )) endif",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0020",
+        "c0040",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 50
+    },
+    {
+      "id": "ECB_RULE_051",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0020}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 51
+    },
+    {
+      "id": "ECB_RULE_052",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0020}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0030}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 52
+    },
+    {
+      "id": "ECB_RULE_053",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0020}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 53
+    },
+    {
+      "id": "ECB_RULE_054",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 54
+    },
+    {
+      "id": "ECB_RULE_055",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 55
+    },
+    {
+      "id": "ECB_RULE_056",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0100}) )) then ( ( not ( isnull ({c0090}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 56
+    },
+    {
+      "id": "ECB_RULE_057",
+      "expression": "with {tB_06.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0050}) )) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0020}) )) or not (( isnull ({c0020}) )) then ( ( not ( isnull ({c0100}) ) )) endif",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0020",
+        "c0080",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 57
+    },
+    {
+      "id": "ECB_RULE_058",
+      "expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0050}) ) )) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0120",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 58
+    },
+    {
+      "id": "ECB_RULE_059",
+      "expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0070}) ) )) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0120",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 59
+    },
+    {
+      "id": "ECB_RULE_060",
+      "expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0080}) ) )) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0120",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 60
+    },
+    {
+      "id": "ECB_RULE_061",
+      "expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0090}) ) )) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0120",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 61
+    },
+    {
+      "id": "ECB_RULE_062",
+      "expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0100}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0110}) ) )) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0120",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 62
+    },
+    {
+      "id": "ECB_RULE_063",
+      "expression": "with {tB_07.01, default: null, interval: false}: if ( not ( isnull ({c0030}) ) ) or not (( isnull ({c0060}) )) or not (( isnull ({c0070}) )) or not (( isnull ({c0080}) )) or not (( isnull ({c0090}) )) or not (( isnull ({c0050}) )) or not (( isnull ({c0110}) )) or not (( isnull ({c0120}) )) then ( ( not ( isnull ({c0100}) ) )) endif",
+      "table_references": [
+        "tB_07.01"
+      ],
+      "column_references": [
+        "c0050",
+        "c0060",
+        "c0100",
+        "c0120",
+        "c0080",
+        "c0110",
+        "c0090",
+        "c0070",
+        "c0030"
+      ],
+      "type": "mandatory_field",
+      "source_row": 63
+    },
+    {
+      "id": "ECB_RULE_064",
+      "expression": "match({tB_01.01, c0020}[get ERI], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_01.01"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 64
+    },
+    {
+      "id": "ECB_RULE_065",
+      "expression": "match({tB_01.02, c0020}[get ESI], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_01.02"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 65
+    },
+    {
+      "id": "ECB_RULE_066",
+      "expression": "match({tB_01.03, c0030}[get LHH], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_01.03"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 66
+    },
+    {
+      "id": "ECB_RULE_067",
+      "expression": "match({tB_02.02, c0040}[get LES], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_02.02"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 67
+    },
+    {
+      "id": "ECB_RULE_068",
+      "expression": "match({tB_03.01, c0030}[get LEA], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_03.01"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 68
+    },
+    {
+      "id": "ECB_RULE_069",
+      "expression": "match({tB_03.03, c0031}[get LEB], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_03.03"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 69
+    },
+    {
+      "id": "ECB_RULE_070",
+      "expression": "match({tB_04.01, c0030}[get LES], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_04.01"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 70
+    },
+    {
+      "id": "ECB_RULE_071",
+      "expression": "match({tB_06.01, c0020}[get LES], \"^[A-Z0-9]{18}[0-9]{2}$\")",
+      "table_references": [
+        "tB_06.01"
+      ],
+      "column_references": [],
+      "type": "regex_validation",
+      "source_row": 71
+    }
+  ]
+}
